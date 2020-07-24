@@ -138,10 +138,10 @@ export default function PizzaForm(props){
                 <label>Size:</label>
                 <select name='size' onChange={onInputChange}>
                     <option>- Select Your Size -</option>
-                    <option name='size' checked={formValues['size'] == 'small'}>Small</option>
-                    <option name='size' checked={formValues['size' == 'medium']}>Medium</option>
-                    <option name='size'  value={formValues['size' == 'large']}>Large</option>
-                    <option name='size'  value={formValues['size' == 'sheet']}>Sheet Pizza</option>
+                    <option name='size' value='small' checked={formValues['size'] == 'small'}>Small</option>
+                    <option name='size' value='medium'checked={formValues['size' == 'medium']}>Medium</option>
+                    <option name='size' value='large' checked={formValues['size' == 'large']}>Large</option>
+                    <option name='size' value='sheet' checked={formValues['size' == 'sheet']}>Sheet Pizza</option>
                 </select>
             </div>
 

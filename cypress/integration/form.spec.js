@@ -9,7 +9,16 @@ describe('The first and last name fields can be filled out', () => {
         .type('Zachary')
         .should('have.value', 'Zachary')
     })
+    it('can select a size', () => {
+        cy.get('select').select('medium')
+    })
+    it('can select a sauce', () => {
+        cy.get('[type="radio"]').first().check()
+    })
     it('can check all checkboxes', () => {
         cy.get('[type="checkbox"]').check() 
     })
+    it('can submit the new order', () => {
+        cy.get('.submitBtn').click()
+      })
 })
