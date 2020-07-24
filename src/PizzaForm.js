@@ -280,6 +280,16 @@ export default function PizzaForm(props){
                                 <p>{ord.name}</p>
                                 <p>{ord.size}</p>
                                 <p>{ord.sauce}</p>
+                                {   
+                                    !!ord.toppings && !!ord.toppings.length &&
+                                    <div>
+                                    Toppings:
+                                    <ul>
+                                        {ord.toppings.map((like, idx) => <li key={idx}>{like}</li>)}
+                                    </ul>
+                                    </div>
+                                }
+                                <p>{ord.special}</p>
                             </div>
                         )
                     })
